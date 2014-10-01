@@ -13,6 +13,9 @@
 		BE9925B119DC49B000A8C5E7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE9925B019DC49B000A8C5E7 /* Images.xcassets */; };
 		BE9925B419DC49B000A8C5E7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE9925B219DC49B000A8C5E7 /* LaunchScreen.xib */; };
 		BE9925C019DC49B000A8C5E7 /* iPlayerAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9925BF19DC49B000A8C5E7 /* iPlayerAppTests.swift */; };
+		BE9925CC19DC4F0300A8C5E7 /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9925CB19DC4F0300A8C5E7 /* Film.swift */; };
+		BE9925DA19DC8B3900A8C5E7 /* XMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9925D919DC8B3900A8C5E7 /* XMLParser.swift */; };
+		BE9925DC19DC8D0700A8C5E7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9925DB19DC8D0700A8C5E7 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,9 @@
 		BE9925B919DC49B000A8C5E7 /* iPlayerAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iPlayerAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE9925BE19DC49B000A8C5E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE9925BF19DC49B000A8C5E7 /* iPlayerAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPlayerAppTests.swift; sourceTree = "<group>"; };
+		BE9925CB19DC4F0300A8C5E7 /* Film.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
+		BE9925D919DC8B3900A8C5E7 /* XMLParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMLParser.swift; sourceTree = "<group>"; };
+		BE9925DB19DC8D0700A8C5E7 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,9 +85,12 @@
 			children = (
 				BE9925A919DC49B000A8C5E7 /* AppDelegate.swift */,
 				BE9925AB19DC49B000A8C5E7 /* ViewController.swift */,
+				BE9925DB19DC8D0700A8C5E7 /* Constants.swift */,
+				BE9925D919DC8B3900A8C5E7 /* XMLParser.swift */,
 				BE9925AD19DC49B000A8C5E7 /* Main.storyboard */,
 				BE9925B019DC49B000A8C5E7 /* Images.xcassets */,
 				BE9925B219DC49B000A8C5E7 /* LaunchScreen.xib */,
+				BE9925CA19DC4E9A00A8C5E7 /* Models */,
 				BE9925A719DC49B000A8C5E7 /* Supporting Files */,
 			);
 			path = iPlayerApp;
@@ -110,6 +119,14 @@
 				BE9925BE19DC49B000A8C5E7 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BE9925CA19DC4E9A00A8C5E7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BE9925CB19DC4F0300A8C5E7 /* Film.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,7 +229,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE9925DC19DC8D0700A8C5E7 /* Constants.swift in Sources */,
 				BE9925AC19DC49B000A8C5E7 /* ViewController.swift in Sources */,
+				BE9925DA19DC8B3900A8C5E7 /* XMLParser.swift in Sources */,
+				BE9925CC19DC4F0300A8C5E7 /* Film.swift in Sources */,
 				BE9925AA19DC49B000A8C5E7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -405,6 +425,7 @@
 				BE9925C519DC49B000A8C5E7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BE9925C619DC49B000A8C5E7 /* Build configuration list for PBXNativeTarget "iPlayerAppTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +434,7 @@
 				BE9925C819DC49B000A8C5E7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
