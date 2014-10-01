@@ -43,7 +43,8 @@ class ViewController: UIViewController, UITableViewDataSource {
 
     func addFilms(notif: NSNotification) {
         assert(NSThread.isMainThread())
-        self.films = notif.userInfo![kFilmsResultKey]! as [Film]
+        films = notif.userInfo![kFilmsResultKey]! as [Film]
+        films.sort({ $0.title < $1.title })
         tableView.reloadData()
     }
 
