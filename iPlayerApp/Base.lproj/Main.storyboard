@@ -16,8 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="wRg-Az-1QG">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="wRg-Az-1QG">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="vXZ-lx-hvc" id="uzg-dt-yFy"/>
@@ -26,6 +26,12 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wRg-Az-1QG" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="9rY-9h-1SF"/>
+                            <constraint firstAttribute="centerX" secondItem="wRg-Az-1QG" secondAttribute="centerX" id="B2a-VW-Ffp"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="wRg-Az-1QG" secondAttribute="bottom" id="Nmb-hg-bWp"/>
+                            <constraint firstAttribute="width" secondItem="wRg-Az-1QG" secondAttribute="width" id="bi9-tQ-CaF"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="tableView" destination="wRg-Az-1QG" id="D1G-Ur-oLY"/>
