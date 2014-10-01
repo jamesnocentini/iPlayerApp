@@ -35,6 +35,10 @@ class ViewController: UIViewController {
 
     }
 
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: NotificationNames.AddFilm.rawValue, object: nil)
+    }
+
     func addFilms(notif: NSNotification) {
         assert(NSThread.isMainThread())
         self.films = notif.userInfo![kFilmsResultKey]! as [Film]
