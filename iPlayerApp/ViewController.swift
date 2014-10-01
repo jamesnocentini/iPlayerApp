@@ -8,9 +8,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDataSource {
     var parser: XMLParser!
     var films: [Film] = []
+
+    @IBOutlet weak var tableView: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,12 +44,26 @@ class ViewController: UIViewController {
     func addFilms(notif: NSNotification) {
         assert(NSThread.isMainThread())
         self.films = notif.userInfo![kFilmsResultKey]! as [Film]
+        tableView.reloadData()
     }
 
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return films.count
+    }
+
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        var cell = tableView.dequeueReusableCellWithIdentifier(kCellReuseIdentifier) as UITableViewCell?
+
+        if let cell = cell {
+
+        } else {
+            cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: kCellReuseIdentifier)
+        }
+
+        cell!.textLabel!.text = films[indexPath.row].title
+
+        return cell!
     }
 
 }
